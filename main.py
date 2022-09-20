@@ -53,7 +53,7 @@ def zaoan():#早安
     res = requests.get(url).json()
     return res['newslist'][0]['content']
 if __name__ == '__main__':
-    time.gmtime()
+    #time.gmtime()
     print(zaoan())
     a,b=tianqi()
     print(a,b)
