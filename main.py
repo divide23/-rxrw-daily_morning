@@ -5,6 +5,7 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
 import os
 import random
+import time
 
 today = datetime.now()
 start_date = os.environ['START_DATE']
@@ -53,7 +54,7 @@ def zaoan():#早安
     res = requests.get(url).json()
     return res['newslist'][0]['content']
 if __name__ == '__main__':
-    #time.gmtime()
+    time.gmtime()
     print(zaoan())
     a,b=tianqi()
     print(a,b)
